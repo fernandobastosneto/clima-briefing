@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Climate Morning Briefing</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --border: #30363d;
+    --text: #c9d1d9;
+    --dim: #8b949e;
+    --fire: #f78166;
+    --notable: #d2a850;
+    --watch: #58a6ff;
+    --link: #58a6ff;
+    --accent: #3fb950;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 16px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  header {
+    text-align: center;
+    padding: 32px 0 24px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 24px;
+  }
+  header h1 { font-size: 1.5rem; margin-bottom: 4px; }
+  header .date { color: var(--dim); font-size: 0.9rem; }
+  .section { margin-bottom: 28px; }
+  .section-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid;
+  }
+  .section-title.fire { color: var(--fire); border-color: var(--fire); }
+  .section-title.notable { color: var(--notable); border-color: var(--notable); }
+  .section-title.watch { color: var(--watch); border-color: var(--watch); }
+  .story {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+  }
+  .story h3 { font-size: 1rem; margin-bottom: 6px; }
+  .story h3.fire { color: var(--fire); }
+  .story h3.notable { color: var(--notable); }
+  .story h3.watch { color: var(--watch); }
+  .sources { color: var(--dim); font-size: 0.8rem; margin-bottom: 8px; }
+  .story p { font-size: 0.95rem; margin-bottom: 8px; color: var(--text); }
+  .story .links { font-size: 0.85rem; }
+  .story a, .links a { color: var(--link); text-decoration: none; }
+  .story a:hover, .links a:hover { text-decoration: underline; }
+  .item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    font-size: 0.92rem;
+  }
+  .item strong { color: var(--watch); }
+  .item a { color: var(--link); text-decoration: none; }
+  .item a:hover { text-decoration: underline; }
+  footer {
+    text-align: center;
+    padding: 24px 0;
+    color: var(--dim);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--border);
+    margin-top: 24px;
+  }
+  .divider { color: var(--dim); margin: 0 6px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>☀️ Climate Morning Briefing</h1>
+  <div class="date">{{DATE}}</div>
+</header>
+
+{{CONTENT}}
+
+<footer>
+  Generated from 12+ newsletters · Updated daily · 
+  <a href="https://github.com/fernandobastosneto/clima-briefing">source</a>
+</footer>
+</body>
+</html>
